@@ -1,2 +1,2 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Plivbot/ESP/main/ESPE.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Plivbot/ESP/main/HitBoxExstender.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Plivbot/Scripts/main/ESPE.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Plivbot/Scripts/main/HitBoxExstender.lua"))()
