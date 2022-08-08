@@ -58,7 +58,7 @@ end
 
 game:GetService("UserInputService").InputBegan:Connect(function(i,gp)
     local pressed = UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
-    if pressed and not gp and line1 and line2 and line3 and line4 and dot then
+    if pressed then
         line1.Visible = not line1.Visible
         line2.Visible = not line2.Visible
         line3.Visible = not line3.Visible
