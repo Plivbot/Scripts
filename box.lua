@@ -1,4 +1,4 @@
-Size = 6 -- Setting higher than 8 or so will screw with the server hit detection and prevent your guns from damaging people. 8 is still easy to "rage" with. I recommend 2-5 if you want to look legit.
+Size = 4 -- Setting higher than 8 or so will screw with the server hit detection and prevent your guns from damaging people. 8 is still easy to "rage" with. I recommend 2-5 if you want to look legit.
 Transparency = 1 -- Leave it at 0.5 if you want the torsos/left legs to be visible. Set to 1 to make them invisible.
 
 game:GetService("RunService").Stepped:Connect(function()
