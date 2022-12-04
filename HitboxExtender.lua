@@ -14,7 +14,7 @@ if v["Torso"].Parent.Parent.Name == "Bright blue" then
 v["Torso"].BrickColor = BrickColor.new("Bright blue")
 end
 if v["Torso"].Parent.Parent.Name == "Bright orange" then
-v["Left Arm"].BrickColor = BrickColor.new("Bright orange")
+v["Torse"].BrickColor = BrickColor.new("Bright orange")
 end
 end
 end
