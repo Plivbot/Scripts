@@ -22,7 +22,7 @@ local function ModelTemplate()
 end
 
 local function GetPartCorners(Part)
-    local Size = Part.Size * Vector3.new(1, 1.5)
+    local Size = Part.Size * Vector3.new(1, 1.5) / 2.5
     return {
         TR = (Part.CFrame * CFrame.new(-Size.X, -Size.Y, 0)).Position,
         BR = (Part.CFrame * CFrame.new(-Size.X, Size.Y, 0)).Position,
@@ -112,7 +112,7 @@ game:GetService("Workspace").Players["Bright blue"].ChildAdded:Connect(function(
 end)
 
 UserInputService.InputBegan:Connect(function(Input, GP)
-    if not GP and Input.KeyCode == Enum.KeyCode.E then
+    if not GP and Input.KeyCode == Enum.KeyCode.Five then
         Visibility = not Visibility
     end
 
@@ -120,4 +120,3 @@ UserInputService.InputBegan:Connect(function(Input, GP)
         CycleFont()
     end
 end)
-
