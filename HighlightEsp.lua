@@ -1,5 +1,8 @@
+local Visibility = true
+
 local players = game:GetService("Players")
 local run_service = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
 
 local local_player = players.LocalPlayer
 local get_children = game.GetChildren
@@ -39,7 +42,7 @@ shared.max_distance = math.huge
 run_service.RenderStepped:Connect(function()
     Setup()
     for _, value in pairs(eps) do
-        if find_first_child(value.esp_object, rootPart) and value.esp_object.Parent.Name ~= local_player.TeamColor.Name then
+        if find_first_child(value.esp_object, rootPart) and value.esp_object.Parent.Name ~= local_player.TeamColor.Name and Visibility then
             local vec3_position = find_first_child(value.esp_object, rootPart).Position
             local screen_position, on_screen = camera:WorldToScreenPoint(vec3_position)
             local distant_from_character = local_player:DistanceFromCharacter(vec3_position)
@@ -67,5 +70,11 @@ objects_folder.DescendantRemoving:Connect(function(child)
         eps[id].highlight:Destroy()
         eps[id].esp_object = nil
         eps[id] = nil
+    end
+end)
+
+UserInputService.InputBegan:Connect(function(Input, GP)
+    if not GP and Input.KeyCode == Enum.KeyCode.Five then
+        Visibility = not Visibility
     end
 end)
